@@ -3,7 +3,7 @@
 
 A robust web-based Quiz Platform built with Java EE, Maven, and MySQL, designed to run on Apache Tomcat server. This platform allows users to take quizzes and administrators to manage questions and answers.
 
-## 🚀 Features
+## Features
 
 ### User Features
 - User registration and authentication
@@ -26,7 +26,7 @@ A robust web-based Quiz Platform built with Java EE, Maven, and MySQL, designed 
 - **Eclipse IDE**: Development environment
 - **JDBC**: Database connectivity
 
-## 📋 Database Schema
+## Database Schema
 
 ### Tables
 1. **Users**
@@ -44,7 +44,7 @@ A robust web-based Quiz Platform built with Java EE, Maven, and MySQL, designed 
    - answer_text (VARCHAR(255), NOT NULL)
    - is_correct (BOOLEAN)
 
-## 🔧 Setup Instructions
+## Setup Instructions
 
 1. **Prerequisites**
    - Java JDK 8 or higher
@@ -53,35 +53,9 @@ A robust web-based Quiz Platform built with Java EE, Maven, and MySQL, designed 
    - Apache Tomcat 9.x
    - MySQL 8.x
 
-2. **Database Setup**
-   ```sql
-   -- Create database
-   CREATE DATABASE quiz_db;
 
-   -- Create users table
-   CREATE TABLE users (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       username VARCHAR(50) NOT NULL,
-       password VARCHAR(255) NOT NULL
-   );
 
-   -- Create questions table
-   CREATE TABLE questions (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       question_text VARCHAR(255) NOT NULL
-   );
-
-   -- Create answers table
-   CREATE TABLE answers (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       question_id INT,
-       answer_text VARCHAR(255) NOT NULL,
-       is_correct BOOLEAN,
-       FOREIGN KEY (question_id) REFERENCES questions(id)
-   );
-   ```
-
-3. **Project Setup**
+2. **Project Setup**
    ```bash
    # Clone the repository
    git clone [repository-url]
@@ -96,7 +70,7 @@ A robust web-based Quiz Platform built with Java EE, Maven, and MySQL, designed 
    # Copy the generated WAR file to Tomcat's webapps directory
    ```
 
-4. **Configuration**
+3. **Configuration**
    - Update database credentials in `UserDAO.java`:
      ```java
      private String jdbcURL = "jdbc:mysql://localhost:30006/quiz_db";
@@ -104,7 +78,7 @@ A robust web-based Quiz Platform built with Java EE, Maven, and MySQL, designed 
      private String jdbcPassword = "root";
      ```
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 quiz-platform/
@@ -125,7 +99,7 @@ quiz-platform/
 └── README.md
 ```
 
-## 💻 Usage
+## Usage
 
 1. **User Registration**
    - Navigate to registration page
@@ -143,7 +117,7 @@ quiz-platform/
    - Manage questions and answers
    - View user statistics
 
-## 🔐 Security Features
+## Security Features
 
 - Password encryption
 - Session management
@@ -151,7 +125,7 @@ quiz-platform/
 - SQL injection prevention
 - XSS protection
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -159,22 +133,15 @@ quiz-platform/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👥 Authors
+## Authors
 
-- Your Name - *Initial work*
+- Saumya Raj - *Initial work*
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Thanks to all contributors
 - Special thanks to the open-source community
-
-## 📞 Support
-
-For support and queries, please open an issue in the repository or contact the maintainers.
-
----
-⭐️ If you found this project helpful, please give it a star!
