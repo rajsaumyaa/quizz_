@@ -17,7 +17,7 @@ A robust web-based Quiz Platform built with Java EE, Maven, and MySQL, designed 
 - View user statistics
 - Monitor quiz performance
 
-## 🛠️ Technical Stack
+## Technical Stack
 
 - **Java EE**: Core programming language
 - **Maven**: Dependency management and build tool
@@ -25,24 +25,6 @@ A robust web-based Quiz Platform built with Java EE, Maven, and MySQL, designed 
 - **Apache Tomcat**: Application server
 - **Eclipse IDE**: Development environment
 - **JDBC**: Database connectivity
-
-## Database Schema
-
-### Tables
-1. **Users**
-   - id (INT, PRIMARY KEY, AUTO_INCREMENT)
-   - username (VARCHAR(50), NOT NULL)
-   - password (VARCHAR(255), NOT NULL)
-
-2. **Questions**
-   - id (INT, PRIMARY KEY, AUTO_INCREMENT)
-   - question_text (VARCHAR(255), NOT NULL)
-
-3. **Answers**
-   - id (INT, PRIMARY KEY, AUTO_INCREMENT)
-   - question_id (INT, FOREIGN KEY)
-   - answer_text (VARCHAR(255), NOT NULL)
-   - is_correct (BOOLEAN)
 
 ## Setup Instructions
 
